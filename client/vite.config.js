@@ -1,18 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import tailwindcss from '@tailwindcss/vite'
 
-// https://vite.dev/config/
 export default defineConfig({
-  base: '/VirtuElect/'
-  plugins: [
-    tailwindcss(),
-    react()
-  ],
-  test: {
-    environment: 'jsdom',
-    globals: true,
-    setupFiles: './src/__tests__/setup.js',
-  },
+  plugins: [react()],
+  base: '/',
 })
-
