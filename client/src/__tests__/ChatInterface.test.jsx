@@ -13,7 +13,7 @@ vi.mock('react-router-dom', () => ({
 
 // ── Mock the config module so fetch hits a controlled URL ──
 vi.mock('../config', () => ({
-  default: 'http://localhost:3001',
+  default: 'https://virtuelect.onrender.com',
 }));
 
 // ── Mock fetch globally ──

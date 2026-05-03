@@ -13,7 +13,7 @@ vi.mock('react-router-dom', () => ({
 
 // Mock config to ensure no real network requests escape
 vi.mock('../config', () => ({
-  default: 'http://localhost:3001',
+  default: 'https://virtuelect.onrender.com',
 }));
 
 // Mock crypto
@@ -57,8 +57,7 @@ describe('ChatInterface Integration', () => {
       expect.objectContaining({ role: 'user', content: 'How do EVMs work?' })
     );
 
-    // Verify API call was made
-    expect(mockFetch).toHaveBeenCalledWith('http://localhost:3001/api/chat', expect.any(Object));
+    expect(mockFetch).toHaveBeenCalledWith('https://virtuelect.onrender.com/api/chat', expect.any(Object));
 
     // Wait for the bot response to be added
     await waitFor(() => {
